@@ -32,6 +32,7 @@ describe('HeroesComponent', () => {
             mockHeroServices.deleteHero.and.returnValue(of(true));
             component.delete(HEROES[2]);
             expect(component.heroes.length).toBe(2);
+            expect(mockHeroServices.delete).toHaveBeenCalled();
         });
     });
 });
